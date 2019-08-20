@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_bg" translatesAutoresizingMaskIntoConstraints="NO" id="O5g-wM-9KI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_full" translatesAutoresizingMaskIntoConstraints="NO" id="bSR-VY-fRh">
+                                <rect key="frame" x="107" y="372.5" width="200" height="151"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="O5g-wM-9KI" secondAttribute="bottom" id="AbL-nP-UHw"/>
+                            <constraint firstItem="bSR-VY-fRh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ra4-Q5-Co5"/>
+                            <constraint firstItem="O5g-wM-9KI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="css-2r-b4u"/>
+                            <constraint firstItem="O5g-wM-9KI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="l7A-Dr-nv5"/>
+                            <constraint firstAttribute="trailing" secondItem="O5g-wM-9KI" secondAttribute="trailing" id="smh-VE-wnC"/>
+                            <constraint firstItem="bSR-VY-fRh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uK5-Li-fhf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_full" width="200.33332824707031" height="151.33332824707031"/>
+        <image name="splash_bg" width="414" height="736"/>
+    </resources>
+</document>

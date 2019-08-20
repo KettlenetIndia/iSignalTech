@@ -1,0 +1,143 @@
+PODS:
+  - Alamofire (4.8.2)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - Cache (5.2.0)
+  - Crashlytics (3.13.1):
+    - Fabric (~> 1.10.1)
+  - EstimoteSDK (4.28.0)
+  - EZSwiftExtensions (2.0)
+  - Fabric (1.10.1)
+  - Firebase/Core (3.17.0):
+    - FirebaseAnalytics (= 3.9.0)
+    - FirebaseCore (= 3.6.0)
+  - Firebase/Messaging (3.17.0):
+    - Firebase/Core
+    - FirebaseMessaging (= 1.2.3)
+  - FirebaseAnalytics (3.9.0):
+    - FirebaseCore (~> 3.6)
+    - FirebaseInstanceID (~> 1.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseCore (3.6.0):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (1.0.10):
+    - FirebaseCore (~> 3.6)
+  - FirebaseMessaging (1.2.3):
+    - FirebaseAnalytics (~> 3.8)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - Protobuf (~> 3.1)
+  - Google/Core (3.1.0):
+    - FirebaseAnalytics (~> 3.2)
+  - Google/SignIn (3.1.0):
+    - Google/Core
+    - GoogleSignIn (~> 4.0)
+  - GoogleSignIn (4.4.0):
+    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
+    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+  - GoogleToolboxForMac/DebugUtils (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - GoogleToolboxForMac/Defines (2.2.1)
+  - GoogleToolboxForMac/Logger (2.2.1):
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSData+zlib (2.2.1)":
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.2.1)":
+    - GoogleToolboxForMac/DebugUtils (= 2.2.1)
+    - GoogleToolboxForMac/Defines (= 2.2.1)
+    - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.1)"
+  - "GoogleToolboxForMac/NSString+URLArguments (2.2.1)"
+  - GTMSessionFetcher/Core (1.2.2)
+  - Imaginary (4.2.0):
+    - Cache (~> 5.0)
+  - IQKeyboardManagerSwift (6.0.3)
+  - KontaktSDK (1.5.1)
+  - LGSideMenuController (2.1.1)
+  - Lightbox (2.3.0):
+    - Imaginary (~> 4.0)
+  - MBProgressHUD (1.1.0)
+  - ObjectMapper (3.4.2)
+  - Protobuf (3.7.0)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - AlamofireObjectMapper
+  - Cache
+  - Crashlytics
+  - EstimoteSDK
+  - EZSwiftExtensions
+  - Fabric
+  - Firebase/Core
+  - Firebase/Messaging
+  - Google/SignIn
+  - IQKeyboardManagerSwift (= 6.0.3)
+  - KontaktSDK (~> 1.3)
+  - LGSideMenuController
+  - Lightbox
+  - MBProgressHUD
+  - ObjectMapper
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireObjectMapper
+    - Cache
+    - Crashlytics
+    - EstimoteSDK
+    - EZSwiftExtensions
+    - Fabric
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - FirebaseMessaging
+    - Google
+    - GoogleSignIn
+    - GoogleToolboxForMac
+    - GTMSessionFetcher
+    - Imaginary
+    - IQKeyboardManagerSwift
+    - KontaktSDK
+    - LGSideMenuController
+    - Lightbox
+    - MBProgressHUD
+    - ObjectMapper
+    - Protobuf
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  Cache: 807c5d86d01a177f06ede9865add3aea269bbfd4
+  Crashlytics: 5aa8e90dcbf2f34898b4f5a0037787531246cca0
+  EstimoteSDK: cd930e53cd15ec32f9a738f339843a73b83620f6
+  EZSwiftExtensions: f73648a591e529a1dbd83c22b19fd3e57df6fb7d
+  Fabric: f6f21452846788bb44595d73e9909d79d328e617
+  Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
+  FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
+  FirebaseCore: 9691ee2ade70c098d7cf92440f4303f16d83ca75
+  FirebaseInstanceID: b9eedd6846fb5e1f0f7279e1deaa7a7e4cf8392e
+  FirebaseMessaging: 753d05a925e9eb8eadd09a0ffc9b808578b72fac
+  Google: 98da4b1a60ed0beb80a290387a28333406a1eb90
+  GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
+  GoogleToolboxForMac: b3553629623a3b1bff17f555e736cd5a6d95ad55
+  GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  Imaginary: dae33d06dbc2ada22f98afef5eb45cc061311a2c
+  IQKeyboardManagerSwift: 04e8679f85e496bb2c474eeb9284052f1b3c391c
+  KontaktSDK: 68cc25fd7fbab5b03b1c86db440620e55b031580
+  LGSideMenuController: ae40c80983ab8b8801c7cef0a6804d43aaa72d45
+  Lightbox: d317750e4132bfb871a5307cfe0a2c7d6a583c65
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
+
+PODFILE CHECKSUM: 56e5aad77ade23d336e313a3877faf3190689fc9
+
+COCOAPODS: 1.6.0
