@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
+import KontaktSDK
 
 @objc protocol ISDelegate {
     @objc optional func didSelectMenuAt(index : Int)
     @objc optional func didUpdateBeaconList(beacons: [CLBeacon])
+    @objc optional func didUpdateKontaktBeaconList(config : KTKDeviceConfiguration , distance : Float)
     @objc optional func locationAuthorizationChanged()
     @objc optional func didUpdateBluetoothState(peripheral: CBManagerState)
 }

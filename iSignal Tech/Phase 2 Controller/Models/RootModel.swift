@@ -276,6 +276,7 @@ class ISBeacon : Mappable{
     var room : Int?
     var status : Int?
     var uuid : String?
+    var distance : Float?
     var beacon: CLBeacon?
     
     var isPresented = false
@@ -300,6 +301,7 @@ class ISBeacon : Mappable{
         room <- map["room"]
         status <- map["status"]
         uuid <- map["uuid"]
+        distance <- map["distance"]
         
     }
     

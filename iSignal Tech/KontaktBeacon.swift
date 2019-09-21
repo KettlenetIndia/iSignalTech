@@ -17,13 +17,15 @@ enum CustomError: Error {
 class KontaktBeacon: NSObject {
 
     var beaconManager : KTKBeaconManager!
-    var  devicesManager : KTKDevicesManager!
+    var devicesManager : KTKDevicesManager!
+    var beaconarray = [[String:Any]]()
     static let shared = KontaktBeacon()
     var closureName: ((String) -> (Void)) = { (testing) in
         print(testing)
     }
-    
-  
+    var discoverbecon : ((KTKDeviceConfiguration,Float)->(Void)) = {(configuration,distance) in
+        
+    }
     
     private override init()
     {
@@ -32,11 +34,14 @@ class KontaktBeacon: NSObject {
     
     func authroziedbeacon() -> Void
     {
+        
+        
     beaconManager = KTKBeaconManager(delegate: self)
     devicesManager = KTKDevicesManager(delegate: self)
         
-        let myProximityUuid = UUID(uuidString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e")
-        let region = KTKBeaconRegion(proximityUUID: myProximityUuid!, identifier: "Beacon region 1")
+        devicesManager.startDevicesDiscovery()
+        
+
         
     switch KTKBeaconManager.locationAuthorizationStatus()
     {
@@ -59,9 +64,7 @@ class KontaktBeacon: NSObject {
     case .authorizedAlways:
   do {
     
-    if KTKBeaconManager.isMonitoringAvailable() {
-        beaconManager.startMonitoring(for: region)
-    }
+  
     
         break
     }
@@ -74,17 +77,67 @@ class KontaktBeacon: NSObject {
 
 extension KontaktBeacon: KTKBeaconManagerDelegate,KTKDevicesManagerDelegate
 {
-    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice]) {
-
-        
-        if let device = devices.filter({$0.uniqueID == "abcd"}).first {
-            let connection = KTKDeviceConnection(nearbyDevice: device)
-            connection.readConfiguration() { configuration, error in
-                if error == nil, let config = configuration {
-                    print("Advertising interval for beacon \(String(describing: config.uniqueID)) is \(config.advertisingInterval!)ms")
-                }
+    func devicesManager(_ manager: KTKDevicesManager, didDiscover devices: [KTKNearbyDevice])
+    {
+//        if let device = devices.filter({$0.uniqueID == "BtYwy6"}).first
+//        {
+            
+            for device in devices
+            {
+                
+            //    print("device rssi",device.rssi.intValue)
+                
+                let connection = KTKDeviceConnection(nearbyDevice: device)
+                        connection.readConfiguration() { configuration, error in
+                            if error == nil, let config = configuration
+                            {
+                                
+                                
+                                let filterarray =  self.beaconarray.filter({ (dict) -> Bool in
+                                
+                                    let major = dict["major"] as! NSNumber
+                                
+                                return major.intValue == config.major?.intValue
+                                
+                                })
+                                
+//                          print("device rssi0",configuration?.rssiAt0Meter)
+//                          print("device rssi1",configuration?.rssiAt1Meter)
+//                          print("device rssitx",configuration?.referenceTXPowerIBeacon?.intValue)
+//                          print("device rssieddy",configuration?.referenceTXPowerEddystone?.intValue)
+                              
+                            if filterarray.count==0
+                            {
+                              self.beaconarray.append(["major":config.major as Any,"minor":config.minor as Any])
+                                
+                                let myProximityUuid = UUID(uuidString: config.proximityUUID!.uuidString)
+                                let region = KTKBeaconRegion(proximityUUID: myProximityUuid!, identifier:config.uniqueID!)
+                                
+                                if KTKBeaconManager.isMonitoringAvailable()
+                                {
+                                    self.beaconManager.startMonitoring(for: region)
+                                }
+                                
+                                
+                            }
+                                
+                             // Distance = 10 ^ ((Measured Power – RSSI)/(10 * N))
+                                let power = ((config.rssiAt1Meter?.first!.floatValue)!-device.rssi.floatValue)/(10*2)
+                                let distance = pow(10, power)
+                                
+                                self.discoverbecon(config,distance)
+                                  
+                                
+                                
+                                
+                                
+                           }
+                        }
+                
             }
-        }
+            
+        
+        
         
     }
     
@@ -92,6 +145,13 @@ extension KontaktBeacon: KTKBeaconManagerDelegate,KTKDevicesManagerDelegate
     func beaconManager(_ manager: KTKBeaconManager, didStartMonitoringFor region: KTKBeaconRegion) {
         // Do something when monitoring for a particular
         // region is successfully initiated
+        
+//        if region != nil
+//        {
+//               print("start region",region)
+//        }
+     
+        
     }
     
     func beaconManager(_ manager: KTKBeaconManager, monitoringDidFailFor region: KTKBeaconRegion?, withError error: Error?) {
@@ -101,10 +161,17 @@ extension KontaktBeacon: KTKBeaconManagerDelegate,KTKDevicesManagerDelegate
     func beaconManager(_ manager: KTKBeaconManager, didEnter region: KTKBeaconRegion) {
         // Decide what to do when a user enters a range of your region; usually used
         // for triggering a local notification and/or starting a beacon ranging
+        
+       //  print("enter region",region)
+        
     }
     
     func beaconManager(_ manager: KTKBeaconManager, didExitRegion region: KTKBeaconRegion) {
         // Decide what to do when a user exits a range of your region; usually used
         // for triggering a local notification and stoping a beacon ranging
+        
+        
+      //  print("exit region",region)
+        
     }
 }

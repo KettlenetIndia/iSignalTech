@@ -14,7 +14,7 @@ import MBProgressHUD
 import ObjectMapper
 import UserNotifications
 import SDWebImage
-
+import KontaktSDK
 
 class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITableViewDelegate,ISDelegate/*,CBPeripheralManagerDelegate,CLLocationManagerDelegate,CBCentralManagerDelegate*/{
     
@@ -81,22 +81,62 @@ class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITable
         self.filterBeacon(beaconList: beacons)
     }
     
+    func didUpdateKontaktBeaconList(config : KTKDeviceConfiguration,distance:Float)
+    {
+       //    self.filterBeacon(beaconList: beacons)
+        
+        if offerBeaconList.count == 0
+           {
+                   offerBeaconList = [ISBeacon]()
+           }
+           for offerBeacon in beaconsData
+           {
+            if   config.major == offerBeacon.major?.toNSNumber() && config.minor == offerBeacon.minor?.toNSNumber()
+                              {
+                                
+                                
+                                 offerBeacon.distance = distance
+                                  if offerBeacon.enterExist?.lowercased() != "true"
+                                  {
+                                      offerBeaconList.append(offerBeacon)
+                                  }
+                                  if !self.containBeacon(beacon: offerBeacon)
+                                  {
+                                      offerBeacon.isPresented = false
+                                      offerPresentList.append(offerBeacon)
+                                  }
+                              }
+           }
+           
+           /* if offers are currently presenting then wait for new untill old are completed
+            if any new offer are added then it will shown in it
+            */
+           if !isCurrentlyOfferShowing{
+               isCurrentlyOfferShowing = true
+               self.showOffer()
+           }
+        
+    }
+    
     private func filterBeacon(beaconList : [CLBeacon]){
         
-        offerBeaconList = [ISBeacon]()
-        
-        for offerBeacon in beaconsData {
-            for beacon in beaconList{
-                
-                if  offerBeacon.uuid?.lowercased() == beaconUUID.uuidString.lowercased() && beacon.major == offerBeacon.major?.toNSNumber() && beacon.minor == offerBeacon.minor?.toNSNumber(){
-                    
+        if offerBeaconList.count == 0
+        {
+                offerBeaconList = [ISBeacon]()
+        }
+        for offerBeacon in beaconsData
+        {
+            for beacon in beaconList
+            {
+                if  offerBeacon.uuid?.lowercased() == beaconUUID.uuidString.lowercased() && beacon.major == offerBeacon.major?.toNSNumber() && beacon.minor == offerBeacon.minor?.toNSNumber()
+                {
                     offerBeacon.beacon = beacon
-                    
-                    if offerBeacon.enterExist?.lowercased() != "true"{
+                    if offerBeacon.enterExist?.lowercased() != "true"
+                    {
                         offerBeaconList.append(offerBeacon)
                     }
-                    
-                    if !self.containBeacon(beacon: offerBeacon){
+                    if !self.containBeacon(beacon: offerBeacon)
+                    {
                         offerBeacon.isPresented = false
                         offerPresentList.append(offerBeacon)
                     }
@@ -113,6 +153,7 @@ class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITable
         }
     }
     
+  
     
     // Checking in list beacon are already in list or not
     private func containBeacon(beacon : ISBeacon) -> Bool{
@@ -270,6 +311,9 @@ class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITable
     // For testing purpose this method is used
     @IBAction func btnActionFireNotification(_ sender: UIButton){
         
+        
+        
+        
         /* if userDefaults.object(forKey: getBeacons) != nil{
          let strBeacon = userDefaults.object(forKey: getBeacons) as! String
          
@@ -415,9 +459,18 @@ class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITable
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let beaconCell = tableView.dequeueReusableCell(withIdentifier: "ISBeaconVenueCell", for: indexPath) as! ISBeaconVenueCell
-        beaconCell.lblDistance.text = offerBeaconList[indexPath.row].locationString()
+        let beacon = offerBeaconList[indexPath.row]
+        if beacon.beacon != nil
+        {
+           beaconCell.lblDistance.text = offerBeaconList[indexPath.row].locationString()
+        }
+        else
+        {
+            beaconCell.lblDistance.text = String(format: "%.2f", beacon.distance!)
+        }
         beaconCell.lblBeaconName.text = offerBeaconList[indexPath.row].deviceName
         beaconCell.btnEnterVenue.addTapGesture { (tap) in
             self.setupOfferView(beacon: self.offerBeaconList[indexPath.row],isAutoPopup: false, isNeedToAddAnalystic: false)
@@ -426,12 +479,10 @@ class ISEnterVenueViewController: UIViewController,UITableViewDataSource,UITable
         return beaconCell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
         return 60
     }
-    
-    
-    
     private func showLightBox(images:[LightboxImage]){
         
         let lightBoxController = LightboxController(images: images)

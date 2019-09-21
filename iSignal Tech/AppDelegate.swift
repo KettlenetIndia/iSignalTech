@@ -20,6 +20,7 @@ import Fabric
 import Crashlytics
 import KontaktSDK
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, FIRMessagingDelegate,CLLocationManagerDelegate,CBCentralManagerDelegate{
     
@@ -50,7 +51,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         KontaktBeacon.shared.authroziedbeacon()
         
         
-
+        KontaktBeacon.shared.discoverbecon = { (config,distance) in
+          //print(config)
+            if (beaconDelegate != nil)
+            {
+                beaconDelegate?.didUpdateKontaktBeaconList!(config: config,distance: distance)
+            }
+            self.kontakt(config: config)
+        }
  
         
         //Setup Local Notifications
@@ -266,13 +274,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func locationManager(_ manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         
-//        NSLog("App Delegate didRangeBeacons Count : \(beacons.count)")
+     //  NSLog("App Delegate didRangeBeacons Count : \(beacons.count)")
         
         if beaconDelegate != nil{
             beaconDelegate?.didUpdateBeaconList!(beacons: beacons)
         }
-        
-        
         if UIApplication.shared.applicationState.hashValue == 2{
             if !isPreparingForNotification{
                 isPreparingForNotification = true
@@ -281,7 +287,77 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
     }
     
+    private func kontakt(config : KTKDeviceConfiguration)
+    {
+        
+        if userDefaults.object(forKey: getBeacons) != nil{
+            
 
+            //2. getting beacon list from userdefault
+            let strBeacon = userDefaults.object(forKey: getBeacons) as! String
+            //3. converting beacon list string to particuler model
+            let beaconList = Mapper<ISBeacon>().mapArray(JSONString: strBeacon)
+            
+            // Checking the detected beacon major and minir and setup local notification
+           
+                
+                
+                
+                for offer in beaconList!{
+                    
+                    if offer.major?.toNSNumber() == config.major && offer.minor?.toNSNumber() == config.minor
+                    {
+                            //1. Created UNMutableNotificationContent Object and configure it
+                            let content = UNMutableNotificationContent()
+                            content.title = "iSignal notification"
+                            content.body = "You have entered into \(offer.deviceName!) iSignal beacon."
+                            content.sound = UNNotificationSound.default
+                            content.userInfo = ["notificationContent" : offer.toJSONString() ?? ""]
+                            
+                            //2. Download notification image and set it.
+                            let urlString = offer.pushnotificationImage?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
+                            print(urlString)
+                            SDWebImageManager.shared.loadImage(
+                                with: URL(string: urlString),
+                                options: .highPriority,
+                                progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
+                                    print(isFinished)
+                                    if error == nil{
+                                        do{
+                                            //3. Adding image attechment to notification
+                                            if let url = self.storeImage(imageName: "Test Notification", image: image!){
+                                                let attechMent = try UNNotificationAttachment(identifier: "Image", url: url, options: nil)
+                                                
+                                                content.attachments = [attechMent]
+                                            }
+                                        }catch _{}
+                                    }
+                              
+                                    userDefaults.synchronize()
+                                    //4. setting up trigger time
+                                    //let trigger = UNLocationNotificationTrigger(region:appRegion, repeats:false)
+                                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0.01, repeats: false)
+                                    //5. adding notification
+                                    let request = UNNotificationRequest(identifier: offer.deviceName!, content: content, trigger: trigger)
+                                    self.center.add(request) { (error) in
+                                        if let error = error {
+                                            print(error.localizedDescription)
+                                        }
+                                    }
+                            }
+                           
+                        }
+                    }
+                }
+                
+//                if config.major == beacons.last?.major && config.minor == beacons.last?.minor{
+//                    isPreparingForNotification = false
+//                }
+            }
+        
+        
+    
+    
     private func beaconInRange(beacons: [CLBeacon]) {
         
 //         When the beacon is detected at that time this delegate method called
@@ -297,7 +373,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             let beaconList = Mapper<ISBeacon>().mapArray(JSONString: strBeacon)
 
             // Checking the detected beacon major and minir and setup local notification
-            for cOffer in beacons{
+            for cOffer in beacons
+            {
                 
                 var firedIds = [String]()
                 if (userDefaults.object(forKey: "removeFiredIds") != nil){
@@ -306,7 +383,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 
                 for offer in beaconList!{
                     
-                    if offer.major?.toNSNumber() == cOffer.major && offer.minor?.toNSNumber() == cOffer.minor{
+                    if offer.major?.toNSNumber() == cOffer.major && offer.minor?.toNSNumber() == cOffer.minor
+                    {
                         
                         if !firedIds.contains(offer.deviceId!){
                             //1. Created UNMutableNotificationContent Object and configure it
@@ -570,17 +648,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 showAlert(title: title1, message: "", buttonText: "OK")
             }
         }
+        
+        //completionHandler([.sound,.alert])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
             if let strNotification:String = userInfo["notificationContent"] as? String{
                 let beacon = Mapper<ISBeacon>().map(JSONString: strNotification)
-                if let rootController = UIApplication.shared.windows[0].rootViewController{
-                    if  rootController.children.count > 0{
+                if let rootController = UIApplication.shared.windows[0].rootViewController
+                {
+                    if  rootController.children.count > 0
+                    {
                         if  rootController.children[0].isKind(of: ISEnterVenueViewController.classForCoder()){
                             let enterVenueViewController = rootController.children[0]  as! ISEnterVenueViewController
-                            enterVenueViewController.setupOfferView(beacon: beacon!,isAutoPopup: false, isNeedToAddAnalystic: true)
+                            enterVenueViewController.setupOfferView(beacon: beacon!,isAutoPopup: false, isNeedToAddAnalystic:true)
                         }
                     }
                 }

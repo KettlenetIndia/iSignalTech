@@ -332,12 +332,15 @@ class ISNetworkManager: NSObject {
         
         self.commanGetSetvice(url: url) { (isSuccess, response) in
             if(isSuccess){
-                
-                for sOffer in (response?.beaconList)!{
+                for sOffer in (response?.beaconList)!
+                {
                     let contain = beaconsData.contains(where: { (eOffer) -> Bool in
-                        if eOffer.deviceId  == sOffer.deviceId{
+                        if eOffer.deviceId  == sOffer.deviceId
+                        {
                             return true
-                        }else{
+                        }
+                        else
+                        {
                             return false
                         }
                     })
@@ -345,9 +348,9 @@ class ISNetworkManager: NSObject {
                         beaconsData.append(sOffer)
                     }
                 }
-                if beaconsData.count > 0{
+                if beaconsData.count > 0
+                {
                     let strBeaconList = beaconsData.toJSONString()
-                    
                     userDefaults.set(strBeaconList, forKey: getBeacons)
                     userDefaults.synchronize()
                 }
