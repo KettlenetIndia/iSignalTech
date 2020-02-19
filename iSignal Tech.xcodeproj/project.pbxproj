@@ -1,0 +1,1022 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180CCBDF1FD7FA6700EA6C7D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180CCBDE1FD7FA6600EA6C7D /* CoreMedia.framework */; };
+		180CCBE11FD7FA7000EA6C7D /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180CCBE01FD7FA7000EA6C7D /* CoreMotion.framework */; };
+		180CCBE31FD7FA7900EA6C7D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180CCBE21FD7FA7900EA6C7D /* AVFoundation.framework */; };
+		180CCBE71FD7FA8C00EA6C7D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180CCBE61FD7FA8C00EA6C7D /* OpenGLES.framework */; };
+		180E9B951FDB9E4D00C563B6 /* ISUpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180E9B941FDB9E4D00C563B6 /* ISUpdateViewController.swift */; };
+		181823151FC544F400D273C1 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC4101ED8B4BD00F2E14F /* Roboto-Bold.ttf */; };
+		181823161FC544F400D273C1 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC4111ED8B4BD00F2E14F /* Roboto-Light.ttf */; };
+		181823171FC544F400D273C1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC4121ED8B4BD00F2E14F /* Roboto-Medium.ttf */; };
+		181823181FC544F400D273C1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC4131ED8B4BD00F2E14F /* Roboto-Regular.ttf */; };
+		181823191FC544F400D273C1 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC4141ED8B4BD00F2E14F /* Roboto-Thin.ttf */; };
+		181E2D241FDA7A240072B40E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181E2D231FDA7A1F0072B40E /* CoreLocation.framework */; };
+		181E2D261FDA7A2B0072B40E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181E2D251FDA7A2B0072B40E /* CoreBluetooth.framework */; };
+		182506EF1FC3088500E8D414 /* ISEnterVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182506EE1FC3088500E8D414 /* ISEnterVenueViewController.swift */; };
+		182506F21FC308AA00E8D414 /* ISFindVenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182506F11FC308AA00E8D414 /* ISFindVenueViewController.swift */; };
+		182506F51FC3092E00E8D414 /* ISSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182506F41FC3092E00E8D414 /* ISSettingViewController.swift */; };
+		1828E6121FCE86BF009EA68C /* ISPinDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1828E6111FCE86BF009EA68C /* ISPinDetailViewController.swift */; };
+		184F4F7C1FED1D4A00AE302F /* BluetoothSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184F4F7B1FED1D4A00AE302F /* BluetoothSettingViewController.swift */; };
+		184F4F7F1FED1EFA00AE302F /* ble_off.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 184F4F7D1FED1EF300AE302F /* ble_off.mp4 */; };
+		184F4F801FED1EFD00AE302F /* ble_on.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 184F4F7E1FED1EF300AE302F /* ble_on.mp4 */; };
+		1859E4211FC3E42D00DC4CA3 /* ZWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E41E1FC3E42700DC4CA3 /* ZWButton.swift */; };
+		1859E4221FC3E42F00DC4CA3 /* ZWImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E41F1FC3E42700DC4CA3 /* ZWImageView.swift */; };
+		1859E4231FC3E43100DC4CA3 /* ZWLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E41D1FC3E42700DC4CA3 /* ZWLabel.swift */; };
+		1859E4241FC3E43400DC4CA3 /* ZWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E41C1FC3E42700DC4CA3 /* ZWTextField.swift */; };
+		1859E4251FC3E43600DC4CA3 /* ZWView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E4201FC3E42700DC4CA3 /* ZWView.swift */; };
+		1859E4271FC3E87B00DC4CA3 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E4261FC3E87B00DC4CA3 /* Define.swift */; };
+		1859E4291FC4578A00DC4CA3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E4281FC4578A00DC4CA3 /* RootViewController.swift */; };
+		1859E42B1FC458B100DC4CA3 /* ISSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1859E42A1FC458B100DC4CA3 /* ISSideMenuViewController.swift */; };
+		185BD5A21FCD68BD009D1A8B /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC42E1ED8CFB900F2E14F /* DrawerViewController.swift */; };
+		186C2A0D1FCC47A00031C6C1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C2A0C1FCC479F0031C6C1 /* SystemConfiguration.framework */; };
+		186C2A0F1FCC47B50031C6C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C2A0E1FCC47B50031C6C1 /* CoreGraphics.framework */; };
+		186C2A111FCC47C00031C6C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 186C2A101FCC47BF0031C6C1 /* Foundation.framework */; };
+		18B69BD11FC554A8002143A8 /* ISNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B69BD01FC554A8002143A8 /* ISNetworkManager.swift */; };
+		18B69BD31FC555EB002143A8 /* RootModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B69BD21FC555EB002143A8 /* RootModel.swift */; };
+		18C09EA91FC595560084E5D1 /* ISCustomMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C09EA81FC595560084E5D1 /* ISCustomMapAnnotation.swift */; };
+		18C09EAB1FC595680084E5D1 /* PopUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C09EAA1FC595680084E5D1 /* PopUpView.xib */; };
+		18E67F151FDAB96100EC5E9D /* iBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E67F141FDAB96100EC5E9D /* iBeaconManager.swift */; };
+		18FAD9F01FCD722400D3633E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC4251ED8B5BF00F2E14F /* Constants.swift */; };
+		35420C0DA6F1BCF5C5ABADFD /* Pods_iSignal_Tech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BD80BA231500C9C6B8DA888 /* Pods_iSignal_Tech.framework */; };
+		8B2E257F230521B100E0332E /* KontaktBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E257E230521B100E0332E /* KontaktBeacon.swift */; };
+		B7D0109CB573CA99A2B4B992 /* Pods_iSignal_TechUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 115798CC080C1FD689C9E92C /* Pods_iSignal_TechUITests.framework */; };
+		B82727681EE74AFC00260BF2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B82727671EE74AFC00260BF2 /* GoogleService-Info.plist */; };
+		B878FD991EDC8627005290EA /* MyBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B878FD981EDC8627005290EA /* MyBeacon.swift */; };
+		B8818EC41EDF2EB6006CA065 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8818EC31EDF2EB6006CA065 /* QuartzCore.framework */; };
+		B8818EC61EDF2EBD006CA065 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8818EC51EDF2EBD006CA065 /* MediaPlayer.framework */; };
+		B8818EC81EDF2EC4006CA065 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8818EC71EDF2EC4006CA065 /* UIKit.framework */; };
+		B8818F731EE1EAD0006CA065 /* popupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8818F721EE1EAD0006CA065 /* popupViewController.swift */; };
+		B8818F771EE22863006CA065 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8818F761EE22863006CA065 /* ForgotPasswordViewController.swift */; };
+		B8DCC3E91ED8AF0C00F2E14F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC3E81ED8AF0C00F2E14F /* AppDelegate.swift */; };
+		B8DCC3EE1ED8AF0C00F2E14F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC3EC1ED8AF0C00F2E14F /* Main.storyboard */; };
+		B8DCC3F11ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC3EF1ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodeld */; };
+		B8DCC3F31ED8AF0C00F2E14F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC3F21ED8AF0C00F2E14F /* Assets.xcassets */; };
+		B8DCC3F61ED8AF0C00F2E14F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8DCC3F41ED8AF0C00F2E14F /* LaunchScreen.storyboard */; };
+		B8DCC42B1ED8BF0F00F2E14F /* CustomRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC4271ED8BF0E00F2E14F /* CustomRequest.swift */; };
+		B8DCC42C1ED8BF0F00F2E14F /* CustomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC4281ED8BF0E00F2E14F /* CustomResponse.swift */; };
+		B8DCC42D1ED8BF0F00F2E14F /* SMNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC42A1ED8BF0F00F2E14F /* SMNetworkManager.swift */; };
+		B8DCC4311ED8D2B600F2E14F /* StartExploringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC4301ED8D2B600F2E14F /* StartExploringViewController.swift */; };
+		B8DCC4391ED994D200F2E14F /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC4381ED994D200F2E14F /* FeedbackViewController.swift */; };
+		B8DCC43B1ED9C75400F2E14F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC43A1ED9C75400F2E14F /* ProfileViewController.swift */; };
+		B8DCC43D1EDA0C1800F2E14F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8DCC43C1EDA0C1800F2E14F /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8DCC3FD1ED8AF0C00F2E14F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8DCC3DD1ED8AF0C00F2E14F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8DCC3E41ED8AF0C00F2E14F;
+			remoteInfo = "iSignal Tech";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		115798CC080C1FD689C9E92C /* Pods_iSignal_TechUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSignal_TechUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		180CCBDE1FD7FA6600EA6C7D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		180CCBE01FD7FA7000EA6C7D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		180CCBE21FD7FA7900EA6C7D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		180CCBE41FD7FA8400EA6C7D /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		180CCBE61FD7FA8C00EA6C7D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		180E9B941FDB9E4D00C563B6 /* ISUpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISUpdateViewController.swift; sourceTree = "<group>"; };
+		181E2D231FDA7A1F0072B40E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		181E2D251FDA7A2B0072B40E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		182506EE1FC3088500E8D414 /* ISEnterVenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISEnterVenueViewController.swift; sourceTree = "<group>"; };
+		182506F11FC308AA00E8D414 /* ISFindVenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISFindVenueViewController.swift; sourceTree = "<group>"; };
+		182506F41FC3092E00E8D414 /* ISSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSettingViewController.swift; sourceTree = "<group>"; };
+		1828E6111FCE86BF009EA68C /* ISPinDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPinDetailViewController.swift; sourceTree = "<group>"; };
+		184F4F7B1FED1D4A00AE302F /* BluetoothSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSettingViewController.swift; sourceTree = "<group>"; };
+		184F4F7D1FED1EF300AE302F /* ble_off.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ble_off.mp4; sourceTree = "<group>"; };
+		184F4F7E1FED1EF300AE302F /* ble_on.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ble_on.mp4; sourceTree = "<group>"; };
+		1859E41C1FC3E42700DC4CA3 /* ZWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWTextField.swift; sourceTree = "<group>"; };
+		1859E41D1FC3E42700DC4CA3 /* ZWLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWLabel.swift; sourceTree = "<group>"; };
+		1859E41E1FC3E42700DC4CA3 /* ZWButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWButton.swift; sourceTree = "<group>"; };
+		1859E41F1FC3E42700DC4CA3 /* ZWImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWImageView.swift; sourceTree = "<group>"; };
+		1859E4201FC3E42700DC4CA3 /* ZWView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWView.swift; sourceTree = "<group>"; };
+		1859E4261FC3E87B00DC4CA3 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		1859E4281FC4578A00DC4CA3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		1859E42A1FC458B100DC4CA3 /* ISSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSideMenuViewController.swift; sourceTree = "<group>"; };
+		186C2A0C1FCC479F0031C6C1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		186C2A0E1FCC47B50031C6C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		186C2A101FCC47BF0031C6C1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		18B69BD01FC554A8002143A8 /* ISNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISNetworkManager.swift; sourceTree = "<group>"; };
+		18B69BD21FC555EB002143A8 /* RootModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootModel.swift; sourceTree = "<group>"; };
+		18C09EA81FC595560084E5D1 /* ISCustomMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISCustomMapAnnotation.swift; sourceTree = "<group>"; };
+		18C09EAA1FC595680084E5D1 /* PopUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpView.xib; sourceTree = "<group>"; };
+		18E67F141FDAB96100EC5E9D /* iBeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBeaconManager.swift; sourceTree = "<group>"; };
+		4BD80BA231500C9C6B8DA888 /* Pods_iSignal_Tech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSignal_Tech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E311387D7829A12E57E729F /* Pods-iSignal Tech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSignal Tech.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech.release.xcconfig"; sourceTree = "<group>"; };
+		8B2E257E230521B100E0332E /* KontaktBeacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KontaktBeacon.swift; sourceTree = "<group>"; };
+		9D612DF71E608BFAE4FB7978 /* Pods-iSignal TechUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSignal TechUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSignal TechUITests/Pods-iSignal TechUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A99C919CA30142189F97644B /* Pods-iSignal TechUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSignal TechUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSignal TechUITests/Pods-iSignal TechUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B82727671EE74AFC00260BF2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B82727691EE7544700260BF2 /* iSignal Tech.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iSignal Tech.entitlements"; sourceTree = "<group>"; };
+		B878FD981EDC8627005290EA /* MyBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyBeacon.swift; sourceTree = "<group>"; };
+		B87C777F1EDD9DFD009FBCF6 /* NetworkOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkOperations.swift; sourceTree = "<group>"; };
+		B87C77811EDDB56B009FBCF6 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		B8818E5D1EDF2304006CA065 /* iSignal Tech-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSignal Tech-Bridging-Header.h"; sourceTree = "<group>"; };
+		B8818EC31EDF2EB6006CA065 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B8818EC51EDF2EBD006CA065 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		B8818EC71EDF2EC4006CA065 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B8818F721EE1EAD0006CA065 /* popupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = popupViewController.swift; sourceTree = "<group>"; };
+		B8818F761EE22863006CA065 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		B8DCC3E51ED8AF0C00F2E14F /* iSignal Tech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iSignal Tech.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DCC3E81ED8AF0C00F2E14F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8DCC3EA1ED8AF0C00F2E14F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		B8DCC3ED1ED8AF0C00F2E14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8DCC3F01ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iSignal_Tech.xcdatamodel; sourceTree = "<group>"; };
+		B8DCC3F21ED8AF0C00F2E14F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8DCC3F51ED8AF0C00F2E14F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8DCC3F71ED8AF0C00F2E14F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8DCC3FC1ED8AF0C00F2E14F /* iSignal TechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iSignal TechUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DCC4101ED8B4BD00F2E14F /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B8DCC4111ED8B4BD00F2E14F /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		B8DCC4121ED8B4BD00F2E14F /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B8DCC4131ED8B4BD00F2E14F /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B8DCC4141ED8B4BD00F2E14F /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		B8DCC4251ED8B5BF00F2E14F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B8DCC4271ED8BF0E00F2E14F /* CustomRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRequest.swift; sourceTree = "<group>"; };
+		B8DCC4281ED8BF0E00F2E14F /* CustomResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomResponse.swift; sourceTree = "<group>"; };
+		B8DCC4291ED8BF0E00F2E14F /* SMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMNetworkManager.h; sourceTree = "<group>"; };
+		B8DCC42A1ED8BF0F00F2E14F /* SMNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMNetworkManager.swift; sourceTree = "<group>"; };
+		B8DCC42E1ED8CFB900F2E14F /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		B8DCC4301ED8D2B600F2E14F /* StartExploringViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartExploringViewController.swift; sourceTree = "<group>"; };
+		B8DCC4321ED95ABF00F2E14F /* NearbyBeaconsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyBeaconsViewController.swift; sourceTree = "<group>"; };
+		B8DCC4341ED975D300F2E14F /* NearbyBeaconsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyBeaconsTableViewCell.swift; sourceTree = "<group>"; };
+		B8DCC4381ED994D200F2E14F /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		B8DCC43A1ED9C75400F2E14F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B8DCC43C1EDA0C1800F2E14F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C7D58E0AFB07FE2D89B8862B /* Pods-iSignal Tech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSignal Tech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8DCC3E21ED8AF0C00F2E14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				181E2D261FDA7A2B0072B40E /* CoreBluetooth.framework in Frameworks */,
+				181E2D241FDA7A240072B40E /* CoreLocation.framework in Frameworks */,
+				180CCBE71FD7FA8C00EA6C7D /* OpenGLES.framework in Frameworks */,
+				180CCBE31FD7FA7900EA6C7D /* AVFoundation.framework in Frameworks */,
+				180CCBE11FD7FA7000EA6C7D /* CoreMotion.framework in Frameworks */,
+				180CCBDF1FD7FA6700EA6C7D /* CoreMedia.framework in Frameworks */,
+				186C2A111FCC47C00031C6C1 /* Foundation.framework in Frameworks */,
+				186C2A0F1FCC47B50031C6C1 /* CoreGraphics.framework in Frameworks */,
+				186C2A0D1FCC47A00031C6C1 /* SystemConfiguration.framework in Frameworks */,
+				B8818EC81EDF2EC4006CA065 /* UIKit.framework in Frameworks */,
+				B8818EC61EDF2EBD006CA065 /* MediaPlayer.framework in Frameworks */,
+				B8818EC41EDF2EB6006CA065 /* QuartzCore.framework in Frameworks */,
+				35420C0DA6F1BCF5C5ABADFD /* Pods_iSignal_Tech.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8DCC3F91ED8AF0C00F2E14F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7D0109CB573CA99A2B4B992 /* Pods_iSignal_TechUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A0E0EB9B30C688FBB331227 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7D58E0AFB07FE2D89B8862B /* Pods-iSignal Tech.debug.xcconfig */,
+				5E311387D7829A12E57E729F /* Pods-iSignal Tech.release.xcconfig */,
+				A99C919CA30142189F97644B /* Pods-iSignal TechUITests.debug.xcconfig */,
+				9D612DF71E608BFAE4FB7978 /* Pods-iSignal TechUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		180E9B931FDB9E3B00C563B6 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				180E9B941FDB9E4D00C563B6 /* ISUpdateViewController.swift */,
+			);
+			path = Update;
+			sourceTree = "<group>";
+		};
+		182506EC1FC3085900E8D414 /* Phase 2 Controller */ = {
+			isa = PBXGroup;
+			children = (
+				187D00071FC56B8F00486C5A /* Authentication */,
+				18B69BD41FC56066002143A8 /* Models */,
+				1859E41B1FC3E3F800DC4CA3 /* Custom File */,
+				182506F61FC3094000E8D414 /* Feedback */,
+				182506F01FC3089D00E8D414 /* Find Venue */,
+				182506F31FC3092400E8D414 /* Setting */,
+				182506ED1FC3087200E8D414 /* Enter Venue */,
+				180E9B931FDB9E3B00C563B6 /* Update */,
+			);
+			path = "Phase 2 Controller";
+			sourceTree = "<group>";
+		};
+		182506ED1FC3087200E8D414 /* Enter Venue */ = {
+			isa = PBXGroup;
+			children = (
+				184F4F7D1FED1EF300AE302F /* ble_off.mp4 */,
+				184F4F7E1FED1EF300AE302F /* ble_on.mp4 */,
+				182506EE1FC3088500E8D414 /* ISEnterVenueViewController.swift */,
+				18E67F141FDAB96100EC5E9D /* iBeaconManager.swift */,
+				184F4F7B1FED1D4A00AE302F /* BluetoothSettingViewController.swift */,
+			);
+			path = "Enter Venue";
+			sourceTree = "<group>";
+		};
+		182506F01FC3089D00E8D414 /* Find Venue */ = {
+			isa = PBXGroup;
+			children = (
+				1859E4281FC4578A00DC4CA3 /* RootViewController.swift */,
+				1859E42A1FC458B100DC4CA3 /* ISSideMenuViewController.swift */,
+				182506F11FC308AA00E8D414 /* ISFindVenueViewController.swift */,
+				18C09EA81FC595560084E5D1 /* ISCustomMapAnnotation.swift */,
+				18C09EAA1FC595680084E5D1 /* PopUpView.xib */,
+				1828E6101FCE86AC009EA68C /* Pin Detail */,
+			);
+			path = "Find Venue";
+			sourceTree = "<group>";
+		};
+		182506F31FC3092400E8D414 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				182506F41FC3092E00E8D414 /* ISSettingViewController.swift */,
+				B8DCC43A1ED9C75400F2E14F /* ProfileViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		182506F61FC3094000E8D414 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC4381ED994D200F2E14F /* FeedbackViewController.swift */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
+		1828E6101FCE86AC009EA68C /* Pin Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1828E6111FCE86BF009EA68C /* ISPinDetailViewController.swift */,
+			);
+			path = "Pin Detail";
+			sourceTree = "<group>";
+		};
+		1859E41B1FC3E3F800DC4CA3 /* Custom File */ = {
+			isa = PBXGroup;
+			children = (
+				1859E41E1FC3E42700DC4CA3 /* ZWButton.swift */,
+				1859E41F1FC3E42700DC4CA3 /* ZWImageView.swift */,
+				1859E41D1FC3E42700DC4CA3 /* ZWLabel.swift */,
+				1859E41C1FC3E42700DC4CA3 /* ZWTextField.swift */,
+				1859E4201FC3E42700DC4CA3 /* ZWView.swift */,
+				1859E4261FC3E87B00DC4CA3 /* Define.swift */,
+				18B69BD01FC554A8002143A8 /* ISNetworkManager.swift */,
+			);
+			path = "Custom File";
+			sourceTree = "<group>";
+		};
+		187D00071FC56B8F00486C5A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC43C1EDA0C1800F2E14F /* LoginViewController.swift */,
+				B8818F721EE1EAD0006CA065 /* popupViewController.swift */,
+				B8818F761EE22863006CA065 /* ForgotPasswordViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		18B69BD41FC56066002143A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18B69BD21FC555EB002143A8 /* RootModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		445964964A5F0023F93E09B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				181E2D251FDA7A2B0072B40E /* CoreBluetooth.framework */,
+				181E2D231FDA7A1F0072B40E /* CoreLocation.framework */,
+				180CCBE61FD7FA8C00EA6C7D /* OpenGLES.framework */,
+				180CCBE41FD7FA8400EA6C7D /* OpenAL.framework */,
+				180CCBE21FD7FA7900EA6C7D /* AVFoundation.framework */,
+				180CCBE01FD7FA7000EA6C7D /* CoreMotion.framework */,
+				180CCBDE1FD7FA6600EA6C7D /* CoreMedia.framework */,
+				186C2A101FCC47BF0031C6C1 /* Foundation.framework */,
+				186C2A0E1FCC47B50031C6C1 /* CoreGraphics.framework */,
+				186C2A0C1FCC479F0031C6C1 /* SystemConfiguration.framework */,
+				B8818EC71EDF2EC4006CA065 /* UIKit.framework */,
+				B8818EC51EDF2EBD006CA065 /* MediaPlayer.framework */,
+				B8818EC31EDF2EB6006CA065 /* QuartzCore.framework */,
+				4BD80BA231500C9C6B8DA888 /* Pods_iSignal_Tech.framework */,
+				115798CC080C1FD689C9E92C /* Pods_iSignal_TechUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B878FD951EDC85AC005290EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B2E257E230521B100E0332E /* KontaktBeacon.swift */,
+				B878FD981EDC8627005290EA /* MyBeacon.swift */,
+				B87C77811EDDB56B009FBCF6 /* Beacon.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B8DCC3DC1ED8AF0C00F2E14F = {
+			isa = PBXGroup;
+			children = (
+				B82727671EE74AFC00260BF2 /* GoogleService-Info.plist */,
+				B8DCC3E71ED8AF0C00F2E14F /* iSignal Tech */,
+				B8DCC3E61ED8AF0C00F2E14F /* Products */,
+				445964964A5F0023F93E09B0 /* Frameworks */,
+				0A0E0EB9B30C688FBB331227 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B8DCC3E61ED8AF0C00F2E14F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC3E51ED8AF0C00F2E14F /* iSignal Tech.app */,
+				B8DCC3FC1ED8AF0C00F2E14F /* iSignal TechUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8DCC3E71ED8AF0C00F2E14F /* iSignal Tech */ = {
+			isa = PBXGroup;
+			children = (
+				B82727691EE7544700260BF2 /* iSignal Tech.entitlements */,
+				B8DCC40B1ED8B44800F2E14F /* UI */,
+				B8DCC40D1ED8B46400F2E14F /* AppDelegate */,
+				B8DCC4241ED8B59600F2E14F /* Constants */,
+				B878FD951EDC85AC005290EA /* Models */,
+				B8DCC41A1ED8B57300F2E14F /* Networking */,
+				B8DCC40E1ED8B4A900F2E14F /* Resources */,
+				B8DCC40C1ED8B45100F2E14F /* ViewController */,
+				182506EC1FC3085900E8D414 /* Phase 2 Controller */,
+				B8DCC3F21ED8AF0C00F2E14F /* Assets.xcassets */,
+				B8DCC3F71ED8AF0C00F2E14F /* Info.plist */,
+				B8DCC3EF1ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodeld */,
+				B8818E5D1EDF2304006CA065 /* iSignal Tech-Bridging-Header.h */,
+			);
+			path = "iSignal Tech";
+			sourceTree = "<group>";
+		};
+		B8DCC40B1ED8B44800F2E14F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC3EC1ED8AF0C00F2E14F /* Main.storyboard */,
+				B8DCC3F41ED8AF0C00F2E14F /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B8DCC40C1ED8B45100F2E14F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC3EA1ED8AF0C00F2E14F /* DashboardViewController.swift */,
+				B8DCC42E1ED8CFB900F2E14F /* DrawerViewController.swift */,
+				B8DCC4301ED8D2B600F2E14F /* StartExploringViewController.swift */,
+				B8DCC4321ED95ABF00F2E14F /* NearbyBeaconsViewController.swift */,
+				B8DCC4341ED975D300F2E14F /* NearbyBeaconsTableViewCell.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		B8DCC40D1ED8B46400F2E14F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC3E81ED8AF0C00F2E14F /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B8DCC40E1ED8B4A900F2E14F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC40F1ED8B4BD00F2E14F /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B8DCC40F1ED8B4BD00F2E14F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC4101ED8B4BD00F2E14F /* Roboto-Bold.ttf */,
+				B8DCC4111ED8B4BD00F2E14F /* Roboto-Light.ttf */,
+				B8DCC4121ED8B4BD00F2E14F /* Roboto-Medium.ttf */,
+				B8DCC4131ED8B4BD00F2E14F /* Roboto-Regular.ttf */,
+				B8DCC4141ED8B4BD00F2E14F /* Roboto-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B8DCC41A1ED8B57300F2E14F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B87C777F1EDD9DFD009FBCF6 /* NetworkOperations.swift */,
+				B8DCC4271ED8BF0E00F2E14F /* CustomRequest.swift */,
+				B8DCC4281ED8BF0E00F2E14F /* CustomResponse.swift */,
+				B8DCC4291ED8BF0E00F2E14F /* SMNetworkManager.h */,
+				B8DCC42A1ED8BF0F00F2E14F /* SMNetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B8DCC4241ED8B59600F2E14F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B8DCC4251ED8B5BF00F2E14F /* Constants.swift */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8DCC3E41ED8AF0C00F2E14F /* iSignal Tech */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8DCC4051ED8AF0C00F2E14F /* Build configuration list for PBXNativeTarget "iSignal Tech" */;
+			buildPhases = (
+				21AAC327A791BC3A639E1ED4 /* [CP] Check Pods Manifest.lock */,
+				B8DCC3E11ED8AF0C00F2E14F /* Sources */,
+				B8DCC3E21ED8AF0C00F2E14F /* Frameworks */,
+				B8DCC3E31ED8AF0C00F2E14F /* Resources */,
+				1849FD351FE0FDAC00FABC1F /* ShellScript */,
+				FA5987FDE4B73ECA8B2433DA /* [CP] Embed Pods Frameworks */,
+				749125286ADD1BE0832AA43E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iSignal Tech";
+			productName = "iSignal Tech";
+			productReference = B8DCC3E51ED8AF0C00F2E14F /* iSignal Tech.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8DCC3FB1ED8AF0C00F2E14F /* iSignal TechUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8DCC4081ED8AF0C00F2E14F /* Build configuration list for PBXNativeTarget "iSignal TechUITests" */;
+			buildPhases = (
+				9594FFCFECCE15374137EE05 /* [CP] Check Pods Manifest.lock */,
+				B8DCC3F81ED8AF0C00F2E14F /* Sources */,
+				B8DCC3F91ED8AF0C00F2E14F /* Frameworks */,
+				B8DCC3FA1ED8AF0C00F2E14F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8DCC3FE1ED8AF0C00F2E14F /* PBXTargetDependency */,
+			);
+			name = "iSignal TechUITests";
+			productName = "iSignal TechUITests";
+			productReference = B8DCC3FC1ED8AF0C00F2E14F /* iSignal TechUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8DCC3DD1ED8AF0C00F2E14F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Salman Maredia";
+				TargetAttributes = {
+					B8DCC3E41ED8AF0C00F2E14F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 38G8TN7QF9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					B8DCC3FB1ED8AF0C00F2E14F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 38G8TN7QF9;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B8DCC3E41ED8AF0C00F2E14F;
+					};
+				};
+			};
+			buildConfigurationList = B8DCC3E01ED8AF0C00F2E14F /* Build configuration list for PBXProject "iSignal Tech" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+				es,
+				fi,
+			);
+			mainGroup = B8DCC3DC1ED8AF0C00F2E14F;
+			productRefGroup = B8DCC3E61ED8AF0C00F2E14F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8DCC3E41ED8AF0C00F2E14F /* iSignal Tech */,
+				B8DCC3FB1ED8AF0C00F2E14F /* iSignal TechUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8DCC3E31ED8AF0C00F2E14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8DCC3F61ED8AF0C00F2E14F /* LaunchScreen.storyboard in Resources */,
+				B82727681EE74AFC00260BF2 /* GoogleService-Info.plist in Resources */,
+				181823181FC544F400D273C1 /* Roboto-Regular.ttf in Resources */,
+				181823161FC544F400D273C1 /* Roboto-Light.ttf in Resources */,
+				184F4F801FED1EFD00AE302F /* ble_on.mp4 in Resources */,
+				18C09EAB1FC595680084E5D1 /* PopUpView.xib in Resources */,
+				181823171FC544F400D273C1 /* Roboto-Medium.ttf in Resources */,
+				181823151FC544F400D273C1 /* Roboto-Bold.ttf in Resources */,
+				B8DCC3F31ED8AF0C00F2E14F /* Assets.xcassets in Resources */,
+				B8DCC3EE1ED8AF0C00F2E14F /* Main.storyboard in Resources */,
+				181823191FC544F400D273C1 /* Roboto-Thin.ttf in Resources */,
+				184F4F7F1FED1EFA00AE302F /* ble_off.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8DCC3FA1ED8AF0C00F2E14F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1849FD351FE0FDAC00FABC1F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ffb96d631719be83f07b2e07dd28b1c50fe9ce73 a15733563caa97d0dc7541f47379a33266e7fea124ececb2cca96d1052877170";
+		};
+		21AAC327A791BC3A639E1ED4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iSignal Tech-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		749125286ADD1BE0832AA43E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9594FFCFECCE15374137EE05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iSignal TechUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA5987FDE4B73ECA8B2433DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
+				"${BUILT_PRODUCTS_DIR}/EZSwiftExtensions/EZSwiftExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Imaginary/Imaginary.framework",
+				"${PODS_ROOT}/KontaktSDK/Cocoapods/iOS/KontaktSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/LGSideMenuController/LGSideMenuController.framework",
+				"${BUILT_PRODUCTS_DIR}/Lightbox/Lightbox.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZSwiftExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Imaginary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KontaktSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGSideMenuController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lightbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iSignal Tech/Pods-iSignal Tech-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8DCC3E11ED8AF0C00F2E14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1859E4211FC3E42D00DC4CA3 /* ZWButton.swift in Sources */,
+				182506F21FC308AA00E8D414 /* ISFindVenueViewController.swift in Sources */,
+				B8818F771EE22863006CA065 /* ForgotPasswordViewController.swift in Sources */,
+				1859E4231FC3E43100DC4CA3 /* ZWLabel.swift in Sources */,
+				B8DCC43D1EDA0C1800F2E14F /* LoginViewController.swift in Sources */,
+				B8DCC4311ED8D2B600F2E14F /* StartExploringViewController.swift in Sources */,
+				18FAD9F01FCD722400D3633E /* Constants.swift in Sources */,
+				B8DCC42B1ED8BF0F00F2E14F /* CustomRequest.swift in Sources */,
+				1859E4251FC3E43600DC4CA3 /* ZWView.swift in Sources */,
+				B8DCC3F11ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodeld in Sources */,
+				180E9B951FDB9E4D00C563B6 /* ISUpdateViewController.swift in Sources */,
+				18C09EA91FC595560084E5D1 /* ISCustomMapAnnotation.swift in Sources */,
+				1859E4291FC4578A00DC4CA3 /* RootViewController.swift in Sources */,
+				18B69BD31FC555EB002143A8 /* RootModel.swift in Sources */,
+				182506F51FC3092E00E8D414 /* ISSettingViewController.swift in Sources */,
+				B8DCC42D1ED8BF0F00F2E14F /* SMNetworkManager.swift in Sources */,
+				1859E4271FC3E87B00DC4CA3 /* Define.swift in Sources */,
+				185BD5A21FCD68BD009D1A8B /* DrawerViewController.swift in Sources */,
+				184F4F7C1FED1D4A00AE302F /* BluetoothSettingViewController.swift in Sources */,
+				B8818F731EE1EAD0006CA065 /* popupViewController.swift in Sources */,
+				B8DCC4391ED994D200F2E14F /* FeedbackViewController.swift in Sources */,
+				1859E4241FC3E43400DC4CA3 /* ZWTextField.swift in Sources */,
+				B8DCC42C1ED8BF0F00F2E14F /* CustomResponse.swift in Sources */,
+				8B2E257F230521B100E0332E /* KontaktBeacon.swift in Sources */,
+				18B69BD11FC554A8002143A8 /* ISNetworkManager.swift in Sources */,
+				B878FD991EDC8627005290EA /* MyBeacon.swift in Sources */,
+				B8DCC3E91ED8AF0C00F2E14F /* AppDelegate.swift in Sources */,
+				B8DCC43B1ED9C75400F2E14F /* ProfileViewController.swift in Sources */,
+				1859E4221FC3E42F00DC4CA3 /* ZWImageView.swift in Sources */,
+				1859E42B1FC458B100DC4CA3 /* ISSideMenuViewController.swift in Sources */,
+				1828E6121FCE86BF009EA68C /* ISPinDetailViewController.swift in Sources */,
+				182506EF1FC3088500E8D414 /* ISEnterVenueViewController.swift in Sources */,
+				18E67F151FDAB96100EC5E9D /* iBeaconManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8DCC3F81ED8AF0C00F2E14F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8DCC3FE1ED8AF0C00F2E14F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8DCC3E41ED8AF0C00F2E14F /* iSignal Tech */;
+			targetProxy = B8DCC3FD1ED8AF0C00F2E14F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8DCC3EC1ED8AF0C00F2E14F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8DCC3ED1ED8AF0C00F2E14F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8DCC3F41ED8AF0C00F2E14F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8DCC3F51ED8AF0C00F2E14F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8DCC4031ED8AF0C00F2E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8DCC4041ED8AF0C00F2E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8DCC4061ED8AF0C00F2E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D58E0AFB07FE2D89B8862B /* Pods-iSignal Tech.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iSignal Tech/iSignal Tech.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38G8TN7QF9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "iSignal Tech/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSignal\\ Tech",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.isignal.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSignal Tech/iSignal Tech-Bridging-Header.h";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8DCC4071ED8AF0C00F2E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E311387D7829A12E57E729F /* Pods-iSignal Tech.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "iSignal Tech/iSignal Tech.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38G8TN7QF9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "iSignal Tech/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/iSignal\\ Tech",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.isignal.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSignal Tech/iSignal Tech-Bridging-Header.h";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B8DCC4091ED8AF0C00F2E14F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A99C919CA30142189F97644B /* Pods-iSignal TechUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 38G8TN7QF9;
+				INFOPLIST_FILE = "iSignal TechUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.isignal.iSignal-TechUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "iSignal Tech";
+			};
+			name = Debug;
+		};
+		B8DCC40A1ED8AF0C00F2E14F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D612DF71E608BFAE4FB7978 /* Pods-iSignal TechUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 38G8TN7QF9;
+				INFOPLIST_FILE = "iSignal TechUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.isignal.iSignal-TechUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "iSignal Tech";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8DCC3E01ED8AF0C00F2E14F /* Build configuration list for PBXProject "iSignal Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8DCC4031ED8AF0C00F2E14F /* Debug */,
+				B8DCC4041ED8AF0C00F2E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8DCC4051ED8AF0C00F2E14F /* Build configuration list for PBXNativeTarget "iSignal Tech" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8DCC4061ED8AF0C00F2E14F /* Debug */,
+				B8DCC4071ED8AF0C00F2E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8DCC4081ED8AF0C00F2E14F /* Build configuration list for PBXNativeTarget "iSignal TechUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8DCC4091ED8AF0C00F2E14F /* Debug */,
+				B8DCC40A1ED8AF0C00F2E14F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8DCC3EF1ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8DCC3F01ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodel */,
+			);
+			currentVersion = B8DCC3F01ED8AF0C00F2E14F /* iSignal_Tech.xcdatamodel */;
+			path = iSignal_Tech.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B8DCC3DD1ED8AF0C00F2E14F /* Project object */;
+}
